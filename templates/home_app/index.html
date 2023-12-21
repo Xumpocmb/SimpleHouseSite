@@ -5,18 +5,20 @@
     <main>
         <header class="row tm-welcome-section">
             <h2 class="col-12 text-center tm-section-title">Welcome to Simple House</h2>
-            <p class="col-12 text-center">Принимая во внимание показатели успешности, постоянный количественный рост и
-                сфера нашей активности играет важную роль в формировании вывода текущих активов. Есть над чем
-                задуматься: многие известные личности ассоциативно распределены по отраслям. Есть над чем задуматься:
-                базовые сценарии поведения пользователей ассоциативно распределены по отраслям.</p>
+            <p class="col-12 text-center">Mattis urna habitasse sed interdum consectetur ex. Molestie mattis vulputate
+                mattis mollis amet, morbi dolo.</p>
         </header>
         <!-- Categories -->
         <div class="tm-paging-links">
             <nav>
                 <ul>
-                    <li class="tm-paging-item"><a href="{% url 'home_app:index' %}" class="tm-paging-link">All menu</a></li>
+                    <li class="tm-paging-item"><a href="{% url 'home_app:index' %}"
+                                                  class="tm-paging-link {% if category_id is None %} active {% endif %} ">All
+                        menu</a></li>
                     {% for category in categories %}
-                        <li class="tm-paging-item"><a href="{% url 'home_app:category' category.id %}" class="tm-paging-link">{{ category.name }}</a></li>
+                        <li class="tm-paging-item"><a href="{% url 'home_app:category' category.id %}"
+                                                      class="tm-paging-link {% if category.id == category_id %} active {% endif %}">{{ category.name }}</a>
+                        </li>
                     {% endfor %}
                 </ul>
             </nav>
@@ -48,13 +50,12 @@
                 </div>
                 <div class="col-md-6">
                     <div class="tm-description-box">
-                        <h4 class="tm-gallery-title">И по сей день в центральных регионах звучит перекатами гитарный
-                            перебор</h4>
-                        <p class="tm-mb-45">Также как разбавленное изрядной долей эмпатии, рациональное мышление создаёт
-                            предпосылки для экспериментов, поражающих по своей масштабности и грандиозности.
+                        <h4 class="tm-gallery-title">Sit quam, tempus lorem lacinia lectus dictumst. Sit sed dolo.</h4>
+                        <p class="tm-mb-45">Lorem dictum in vulputate eleifend sit mollis sed non arcu sapien sapien ut.
+                            Luctus est. Dui elit. Imperdiet dictum. In in eget mattis dictumst. Nunc et. Vel orci,
+                            dictum. Luctu.
                             <a rel="nofollow" href="#">talk to us</a>
-                            Идейные соображения высшего порядка, поражающих по своей масштабности и
-                            грандиозности. Thank you.</p>
+                            Dolor vestibulum habitasse molestie molestie hac nisi tortor, lacinia dapibu.</p>
                         <a href="about.html" class="tm-btn tm-btn-default tm-right">Read More</a>
                     </div>
                 </div>

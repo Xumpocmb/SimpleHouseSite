@@ -6,6 +6,8 @@ def index(request, category_id=None):
     context = {
         'title': 'SimpleHouse',
         'products': Product.objects.filter(category_id=category_id) if category_id else Product.objects.all(),
-        'categories': Category.objects.all()
+        'categories': Category.objects.all(),
+        'category_id': category_id,
+        'nav_link': 'home',
     }
     return render(request, 'home_app/index.html', context)

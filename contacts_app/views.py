@@ -10,6 +10,7 @@ from django.core.mail import send_mail, EmailMultiAlternatives
 def contact_message(request):
     context = {
         'title': 'Contact Page',
+        'nav_link': 'contact',
     }
     if request.method == 'POST':
         form = ContactMessagesForm(request.POST)
